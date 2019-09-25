@@ -42,7 +42,7 @@ class Artist
 
   def self.most_prolific
   #   * Returns an `instance` of the artist with the highest amount of paintings per year of experience.
-    
+    self.all.max_by { |artist| artist.paintings.count.to_f / artist.years_experience.to_f }
   end
 
 
